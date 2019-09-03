@@ -10,3 +10,4 @@ relations/*
 *.rds
 *.sqlite
 *.zip
+*.swp

@@ -1,6 +1,8 @@
 source('relationalize.R')
+source('regularize.R')
 
 cfs <- read.csv('data/cf_4_4.csv', stringsAsFactors = FALSE)
+cfs <- regularize(cfs)
 
 cfs$actor_name <- gsub('\\s+',' ',cfs$actor_name)
 

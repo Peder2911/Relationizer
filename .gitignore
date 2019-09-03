@@ -1,0 +1,12 @@
+
+data/*
+!data/.gitkeep
+prod/*
+!prod/.gitkeep
+relations/*
+!relations/.gitkeep
+*.xlsx
+*.csv
+*.rds
+*.sqlite
+*.zip

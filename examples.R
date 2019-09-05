@@ -19,6 +19,7 @@ relation_defs <- list(actors = alist(UCDP_Actor_ID, actor_name, acid,
                                          CF_effect_day, written, Purpose_1,
                                          Purpose_2, Mediator_nego, Mediator_send,
                                          Implement, Enforcement, locid,
+                                         Ceasefire_Type,
                                          key.x = locid, key.y = locid))
 
 args <- c(list(cfs), relation_defs)

@@ -11,3 +11,6 @@ relations/*
 *.sqlite
 *.zip
 *.swp
+
+.Rhistory
+.help

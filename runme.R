@@ -12,21 +12,21 @@ cfs <- regularize(cfs)
 cfs$actor_name <- gsub('\\s+',' ',cfs$actor_name)
 
 
-cfs$locid <- paste0(cfs$CC,'-',cfs$CF_ID)
-cfs$acid <- paste0(cfs$CC,'-',cfs$actor_name)
+cfs$locid <- paste0(cfs$cc,'-',cfs$cf_id)
+cfs$acid <- paste0(cfs$cc,'-',cfs$actor_name)
 
 
-relation_defs <- list(actors = alist(UCDP_Actor_ID, actor_name, acid,
+relation_defs <- list(actors = alist(ucdp_actor_id, actor_name, acid,
                                         key.x = acid, key.y = acid),
 
-                      locations = alist(CC, Location, Region, 
-                                        key.x = CC, key.y = CC),
+                      locations = alist(cc, location, region, 
+                                        key.x = cc, key.y = cc),
 
-                      ceasefires = alist(CF_effect_yr, CF_effect_month, CF_ID,
-                                         CF_effect_day, Written, Purpose_1,
-                                         Purpose_2, Mediator_nego, Mediator_send,
-                                         Implement, Enforcement, locid,
-                                         Ceasefire_Type,
+                      ceasefires = alist(cf_effect_yr, cf_effect_month, cf_id,
+                                         cf_effect_day, written, purpose_1,
+                                         purpose_2, mediator_nego, mediator_send,
+                                         implement, enforcement, locid,
+                                         ceasefire_class,
                                          key.x = locid, key.y = locid))
 
 args <- c(list(cfs), relation_defs)
